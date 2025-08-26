@@ -82,12 +82,14 @@ body {
    Main content spacing
    =========================== */
 main {
-  max-width: 800px;
+  max-width: 75%;
   margin: 2rem auto;
   padding: 2rem;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  text-align: left;
 }
 
 /* Optional: smaller screens */
