@@ -1,38 +1,43 @@
-/* Header container layout */
-.header-container {
+/* Header container: stack title and nav vertically */
+.site-header .header-container {
   display: flex;
-  flex-direction: column; /* Stack title above nav */
-  align-items: center;    /* Center horizontally */
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
   text-align: center;
   padding: 1rem 0;
 }
 
 /* Site title */
-.header-title {
+.site-header .header-title {
   font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.75rem; /* Space between name and nav */
+  font-weight: 700;
+  margin-bottom: 0.5rem; /* space below the name */
 }
 
-/* Navigation */
-.header-nav ul {
+/* Nav wrapper */
+.site-header .header-nav {
+  /* no width specified, let it shrink-wrap content */
+}
+
+/* Nav list */
+.site-header .header-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;          /* Put links in a row */
-  gap: 1.5rem;            /* Space between links */
-  justify-content: center;
+  display: flex;          /* arrange links in a row */
+  gap: 1.5rem;            /* spacing between links */
+  justify-content: center; /* center row inside nav */
 }
 
-.header-nav a {
+/* Nav links */
+.site-header .header-nav a {
+  color: var(--text-light);
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
-  color: var(--text-light);
-  transition: color 0.3s;
 }
 
-.header-nav a:hover,
-.header-nav a:focus {
+.site-header .header-nav a:hover,
+.site-header .header-nav a:focus {
   color: var(--primary);
 }
