@@ -127,7 +127,7 @@ li {
 .header-container nav ul {
   
   padding: 0;
-  display: flex;
+  
   gap: 1.5rem; /* spacing between links */
   justify-content: center;
 }
