@@ -99,61 +99,70 @@ li {
 }
 
 /* ===========================
-   Header & Navigation
-   =========================== */
+   /* ========== Header (replace your header CSS with this) ========== */
 .site-header {
   width: 100%;
-  position: sticky;
-  top: 0;
   background-color: var(--dark-bg);
   color: var(--text-light);
-  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Header container layout */
-.header-container {
+/* Stack title and nav vertically and center them */
+.site-header .header-container {
   display: flex;
-  flex-direction: column; /* stack vertically */
-  align-items: center;    /* center horizontally */
+  flex-direction: column;
+  align-items: center;   /* center horizontally */
+  justify-content: center;
   text-align: center;
-  padding: 1rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
 }
 
 /* Site title */
-.header-title {
+.site-header .header-title {
   font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem; /* space between name and nav */
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;  /* space below the name */
 }
 
-/* Nav links */
-.header-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;         /* put links in a row */
-  gap: 1.5rem;           /* spacing between links */
+/* Nav wrapper */
+.site-header .header-nav {
+  width: 100%;
+  display: flex;
   justify-content: center;
 }
 
-.header-nav a {
-  text-decoration: none;
-  font-weight: 500;
+/* Nav list: center, remove the global UL left margin, and row layout */
+.site-header .header-nav ul {
+  list-style: none;
+  margin: 0;             /* overrides global UL margin */
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
-.nav-link {
-  color: var(--text-light);
+/* Links: force light color in header and primary on hover/focus */
+.site-header .header-nav a {
+  color: var(--text-light) !important;       /* overrides global a color */
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
-  transition: color 0.3s;
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.site-header .header-nav a:visited {
+  color: var(--text-light) !important;
+}
+
+.site-header .header-nav a:hover,
+.site-header .header-nav a:focus {
   color: var(--primary);
+  text-decoration: underline;
 }
 
 /* ===========================
