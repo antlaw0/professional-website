@@ -99,3 +99,11 @@ main {
     gap: 1rem;
   }
 }
+
+.site-logo {
+  height: 60px; /* adjust size */
+  width: auto;
+  display: block;
+  margin: 0 auto; /* centers the logo */
+  filter: drop-shadow(0px 0px 6px #0ff); /* optional cyberpunk glow */
+}
