@@ -32,6 +32,28 @@ body {
   text-align: center;
 }
 
+   Main content spacing
+   =========================== */
+main {
+  max-width: 75%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  text-align: left;
+}
+
+/* Optional: smaller screens */
+@media (max-width: 768px) {
+  .header-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+
 /* ===========================
    Header
    =========================== */
@@ -79,31 +101,3 @@ body {
 }
 
 /* ===========================
-   Main content spacing
-   =========================== */
-main {
-  max-width: 75%;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-
-  text-align: left;
-}
-
-/* Optional: smaller screens */
-@media (max-width: 768px) {
-  .header-nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
-
-.site-logo {
-  height: 60px; /* adjust size */
-  width: auto;
-  display: block;
-  margin: 0 auto; /* centers the logo */
-  filter: drop-shadow(0px 0px 6px #0ff); /* optional cyberpunk glow */
-}
