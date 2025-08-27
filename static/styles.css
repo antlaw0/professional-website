@@ -52,7 +52,7 @@ main {
     gap: 1rem;
   }
 }
-
+// header styling
 
 .site-header {
   width: 100%;
@@ -63,25 +63,30 @@ main {
 }
 
 .header-container {
-  display: flex;
-  align-items: center;          /* vertically center items */
-  justify-content: space-between; /* logo/title on left, nav on right */
+  display: flex;                /* row layout */
+  align-items: center;          /* vertical centering */
+  justify-content: space-between; /* logo/title left, nav right */
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;              /* allow wrapping on small screens */
+}
+
+.site-logo-link {
+  display: flex;
+  align-items: center;
 }
 
 .site-logo {
   height: 40px;
   width: auto;
   display: block;
-  margin: 0; /* remove auto centering */
-  filter: none;
+  margin: 0;                    /* remove centering */
 }
 
 .header-title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-left: 0.5rem;  /* space between logo and title */
+  margin-left: 0.5rem;          /* space between logo and title */
   color: var(--text-light);
 }
 
@@ -106,14 +111,15 @@ main {
   text-decoration: underline;
 }
 
-/* Responsive tweak for smaller screens */
+/* Responsive tweak */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
   }
   .header-title {
-    margin: 0.5rem 0;
+    margin-left: 0;
   }
   .header-nav ul {
     flex-direction: column;
