@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/professional-website/static/styles.css">
-
+<link rel="stylesheet" href="{{ '/static/styles.css' | relative_url }}">
+  
 </head>
 <body>
+<a href="{{ '/' | relative_url }}">
+    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Anthony Lawlor Logo" class="site-logo">
+  </a>
+  
   {% include header.html %}
 
   <main>
