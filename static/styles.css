@@ -24,12 +24,13 @@ html, body {
 
 /* Keep main content centered, header will override */
 body {
-  display: flex;
-  
-  flex-direction: column;
-  align-items: stretch; /* allow header to be full width */
-  justify-content: flex-start; /* start from top */
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Open Sans", system-ui, -apple-system, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--body-text);
   min-height: 100vh;
+  display: block;  /* remove flex */
 }
 
 main {
@@ -45,47 +46,41 @@ main {
    Header Styling
    =========================== */
 .site-header {
-	  position: sticky; /* or fixed */
-	    top: 0;           /* stick to top */
-		  z-index: 1000;    /* keep it above content */
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
   background-color: var(--header-bg);
   color: var(--text-light);
-  padding: 1rem 1rem; /* increased vertical padding */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Logo on top-left */
-.site-logo-link {
-  position: absolute;
-  top: 1.5rem;   /* adjust vertical distance from top */
-  left: 1rem;    /* adjust horizontal distance from left */
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   display: flex;
+  flex-direction: column; /* stack header-top and nav */
   align-items: center;
 }
 
-.site-logo {
-  height: 40px;
-  width: auto;
-  display: block;
-  margin: 0;
+.header-top {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start; /* logo left, title center if you want */
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 
-/* Title centered horizontally */
+.site-logo-link {
+  margin-right: 1rem;
+}
+
 .header-title {
-  font-size: 2rem;
-  font-weight: 700;
+  flex: 1;               /* allows title to expand */
   text-align: center;
-  margin: 0 auto 1rem auto; /* bottom margin for spacing from nav */
-  display: block;
-  color: var(--text-light);
+  font-size: 2rem;
 }
 
-/* Navigation links centered under title */
 .header-nav {
   text-align: center;
   width: 100%;
-  margin-top: 0.5rem;
 }
 
 .header-nav ul {
@@ -109,6 +104,14 @@ main {
   text-decoration: underline;
 }
 
+/* Ensure main content is not hidden behind header */
+.main-content {
+  padding-top: 120px; /* match approx header height */
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 /* Responsive tweak */
 @media (max-width: 768px) {
   .header-title {
