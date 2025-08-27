@@ -26,10 +26,10 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  align-items: center; /* horizontal center */
-  justify-content: center; /* vertical center */
-  min-height: 100vh; /* full viewport height */
-  text-align: center;
+  align-items: stretch; /* allow children to take full width */
+  justify-content: flex-start; /* start from top */
+  min-height: 100vh;
+  text-align: left; /* optional, header will override anyway */
 }
 
    Main content spacing
