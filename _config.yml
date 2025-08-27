@@ -1,2 +1,4 @@
 theme: null
 markdown: kramdown
+baseurl: "/professional-website"   # the subpath of your site
+url: "https://antlaw0.github.io"   # your GitHub Pages URL (without trailing slash)
