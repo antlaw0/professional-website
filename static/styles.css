@@ -25,10 +25,17 @@ html, body {
 /* Keep main content centered, header will override */
 body {
   display: flex;
+  
   flex-direction: column;
   align-items: stretch; /* allow header to be full width */
   justify-content: flex-start; /* start from top */
   min-height: 100vh;
+}
+
+main {
+  max-width: 800px;      /* keeps text from stretching too wide */
+  margin: 0 auto;        /* centers the block horizontally */
+  padding: 0 1rem;       /* ensures a little breathing room on small screens */
 }
 
 /* ===========================
