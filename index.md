@@ -46,12 +46,9 @@ title: "Anthony Lawlor | Home page"
 <section>
   <h2 id="contact-heading">Get in Touch</h2>
   <p>
-    I’m open to networking, collaboration, and new opportunities. You can
-    reach me at:
-  </p>
-  <ul>
-    <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></li>
-    <li>GitHub: <a href="https://github.com/yourgithub">github.com/yourgithub</a></li>
-  </ul>
+    I’m open to networking, collaboration, and new opportunities. You can use the form below to get in contact with me and I will respond via email shortly.
+    </p>
+	<br>
+	{% include contact-form.html %}
+	
 </section>
