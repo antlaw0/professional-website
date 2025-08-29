@@ -91,7 +91,8 @@ body {
 
 .header-nav a:hover,
 .header-nav a:focus {
-  color: var(--primary);
+  /* color: var(--primary); */
+  color:  yellow;
   text-decoration: underline;
 }
 
@@ -194,4 +195,48 @@ h6 {
     flex-direction: column;
     gap: 1rem;
   }
+}
+
+/*  project-cards component styling */
+.project-card {
+  background: #111;
+  color: #eee;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-content h3 {
+  margin-top: 12px;
+  font-size: 1.2rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #0ff;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
